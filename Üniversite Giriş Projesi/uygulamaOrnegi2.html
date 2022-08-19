@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <script src="node_modules/popperjs/dist/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <title>Uygulama 2</title>
+    <style>
+        .h-100vh {
+            height: 100vh;
+        }
+
+        .login_header {
+            margin: 0;
+            font-size: 30px;
+            color: #4d627b;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .login_headertext {
+            margin: 0;
+            color: #4d627b;
+            font-size: 16px;
+        }
+
+        .kullanici {
+            margin-top: 10px;
+        }
+
+        img {
+            opacity: 0.8;
+        }
+
+        .bg {
+            background-image: url("resim/beun_giris_sayfasi.jpg");
+            background-size: cover;
+
+        }
+
+        .golge {
+            box-shadow: 0px 0px 15px black;
+        }
+
+        .icbosluk {
+            padding-left: 12px;
+            padding-right: 12px;
+        }
+
+        /* .store {
+            height: 45px;
+            float: left;
+        }
+
+        .store_text {
+            font-size: 14.6px;
+            color: white;
+            padding-right: 5px;
+            font-weight: bold;
+        } */
+
+        .app {
+            margin: 0;
+            padding: 0;
+            /* float: right; */
+        }
+
+        .yazi {
+            color: rgb(0, 0, 0);
+        }
+
+        .maxyukseklik {
+            max-height: 75px;
+        }
+
+        .office_365:hover {
+            color: white;
+        }
+
+        .beun {
+            position: sticky;
+        }
+
+        .card-body{
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body class="h-100 bg">
+
+
+
+
+    <div class="container-fluid h-100">
+        <div class="row align-items-center h-100vh">
+            <!-- <div class="col-md-3">
+                <img class="beun" src="resim/yuzu_roll.jpg" alt="">
+            </div> -->
+            <div class="col-md-6 offset-md-3">
+                <div class="card h-100 icbosluk golge">
+                    <div class="row">
+                        <div class="col-md-6 px-0">
+                            <div class="card h-100">
+                                <div class="card-header">
+                                    <h4 class="login_header">KULLANICI GİRİŞİ</h4>
+                                    <span class="login_headertext">Hesabınızla Giriş Yapınız</span>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-12 ">
+                                            <img src="resim/beun_logo.png" height="130px" width="360px" alt="">
+                                        </div>
+                                    </div>
+                                    <form>
+                                        <div class="row">
+                                            <div class="col-md-12 kullanici">
+                                                <div class="input-group mb-3">
+                                                    <span class="input-group-text fa fa-user" id="basic-addon1"></span>
+                                                    <input type="text" class="form-control" placeholder="Username"
+                                                        aria-label="Username" aria-describedby="basic-addon1">
+                                                </div>
+
+                                                <div class="input-group mb-3">
+                                                    <span class="input-group-text fa-solid fa-asterisk"
+                                                        id="basic-addon1"></span>
+                                                    <input type="password" class="form-control" placeholder="Password"
+                                                        aria-label="Username" aria-describedby="basic-addon1">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-check mb-4">
+                                            <input type="checkbox" class="form-check-input">
+                                            <label class="form-check-label">
+                                                Remember Me
+                                            </label>
+                                        </div>
+                                        <div class="form-group">
+                                            <button class="btn btn-primary yazi container-fluid mt-1" type="submit">
+                                                GİRİŞ
+                                            </button>
+                                        </div>
+                                        <div class="form-group">
+                                            <a class="btn btn-danger yazi container-fluid mt-1"
+                                                href="https://giris.turkiye.gov.tr/Giris/gir" target="_blank">
+                                                <img src="resim/e_devlet.jpg" width="30px" alt=""> E-Devlet İle
+                                                Giriş
+                                            </a>
+                                            <!-- <button class="btn btn-danger container-fluid mt-1" type="submit" id="btn">
+                                                <img src="resim/e_devlet.jpg" alt="" width="30px"> E-Devlet İle Giriş
+                                            </button> -->
+                                        </div>
+                                        <div class="form-group">
+                                            <a class="btn btn-warning office_365 container-fluid mt-1"
+                                                href="https://login.microsoftonline.com/common/oauth2/v2.0/authorize?client_id=4765445b-32c6-49b0-83e6-1d93765276ca&redirect_uri=https%3A%2F%2Fwww.office.com%2Flandingv2&response_type=code%20id_token&scope=openid%20profile%20https%3A%2F%2Fwww.office.com%2Fv2%2FOfficeHome.All&response_mode=form_post&nonce=637925303321450186.ZGRlOTI1NzEtZDE0MS00M2EyLTljZDktOGQ0Yjg4ZjAzNzg5NzVhNGM4NDAtZGZmNC00ZTY0LWFkN2UtNGUzM2ZlMjgyZDBm&ui_locales=tr&mkt=tr&client-request-id=b0b4c224-8844-4d87-ab3f-15b18ea18cbc&state=Z9Y4OhUX6EK2ISttyAjsm__WKWtj1wm5_dM2pAYSsMnecwE-ZbNDKCsY4nXxEd6qRIXFiiPj2ByMdW2IQoRpZgirX0-7bZJQBaYtRwG8FpUvBXJfGetrPW0K7H1SK2_boOFU4PpOpAatw-FV7kGpUqGRPGcAgug4WeNvyDgxoDG_YdjuqsPpmaqAvachGJPpyMlH81iDo_6dAs6ErWuuWgPGLkRhhdO9ookAvJ0LUQY3y1F0dpl6oQOSp_5JKCjryl-s_79ZxMdujLQGSI2mz46rhSEtZSxmRV-aZgor05k&x-client-SKU=ID_NETSTANDARD2_0&x-client-ver=6.12.1.0"
+                                                target="_blank">
+                                                <img src="resim/office_365.png" width="30px" alt=""> Office365 İle
+                                                Giriş
+                                            </a>
+                                        </div>
+                                    </form>
+
+                                </div>
+                                <div class="maxyukseklik card-footer container-fluid bg-dark">
+                                    <form>
+                                        <a class="app btn btn-dark" href="https://apps.apple.com/tr/" target="_blank">
+                                            <img src="resim/app_store.png" width="160px" alt="">
+                                        </a>
+                                        <a class="app btn btn-dark"
+                                            href="https://play.google.com/store/apps/details?id=com.beu.beumobile&gl=TR"
+                                            target="_blank">
+                                            <img src="resim/play_store.png" width="160px" height="58px" alt="">
+                                        </a>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-6 px-0 bg-dark">
+                            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-indicators">
+                                    <button type="button" data-bs-target="#carouselExampleIndicators"
+                                        data-bs-slide-to="0" class="active" aria-current="true"
+                                        aria-label="Slide 1"></button>
+                                    <button type="button" data-bs-target="#carouselExampleIndicators"
+                                        data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                    <button type="button" data-bs-target="#carouselExampleIndicators"
+                                        data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                </div>
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="resim/orman.jpg" class="d-block w-100 rounded img-fluid" alt="...">
+                                        <div class="carousel-caption d-none d-md-block">
+                                            <h5>Orman</h5>
+                                            <p>
+                                                Yeşilin güzelliğine kendini kaptır.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="resim/gun_batimi.jpg" class="d-block w-100 rounded img-fluid"
+                                            alt="...">
+                                        <div class="carousel-caption d-none d-md-block">
+                                            <h5>Gün Batımı</h5>
+                                            <p>
+                                                Kırmızının efsane tonunu görmeye hazırmısın?
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="resim/deniz.jpg" class="d-block w-100 rounded img-fluid" alt="...">
+                                        <div class="carousel-caption d-none d-md-block">
+                                            <h5>Deniz</h5>
+                                            <p>
+                                                Denizin eşsiz güzelliği sana çok iyi gelecek.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
